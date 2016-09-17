@@ -3,16 +3,13 @@
 usage
 
 ```
-type Foo
+julia> type Foo
     a
     b
 end
-
-using KeywordConstructor
-
-@keyword_constructor Foo
-
-Foo(a=1, b=2)
-
-
+julia> using KeywordConstructor
+julia> @keyword_constructor Foo
+Foo
+julia> Foo(b=2, a=1)
+Foo(1, 2)
 ```
